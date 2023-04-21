@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+#Container {
+  max-width: fit-content;
+  min-height: 100vh;
+  margin: auto;
+}
+
+body {
+  background-color: rgb(150, 212, 60);
+  background-image: url("assets/fundo.svg");
+  background-size: cover;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.moles {
+  display: grid;
+  grid-template-areas:
+  "A B C D"
+  "E F G H"
+  "I J K L";
+  gap: 1rem 5rem;
+}
+
+.moles div:nth-child(1){
+  grid-area: A;
+}
+
+.moles div:nth-child(2){
+  grid-area: B;
+}
+
+.moles div:nth-child(3){
+  grid-area: C;
+}
+
+.moles div:nth-child(4){
+  grid-area: D;
+  animation: none;
+}
+
+.moles div:nth-child(5){
+  grid-area: E;
+  animation: none;
+}
+
+.moles div:nth-child(6){
+  grid-area: F;
+  animation: none;
+}
+
+.moles div:nth-child(7){
+  grid-area: G;
+}
+
+.moles div:nth-child(8){
+  grid-area: H;
+}
+
+.moles div:nth-child(9){
+  grid-area: I;
+  animation: none;
+}
+
+.moles div:nth-child(10){
+  grid-area: J;
+  animation: none;
+}
+
+.moles div:nth-child(11){
+  grid-area: K;
+}
+
+.moles div:nth-child(12){
+  grid-area: L;
+  animation: none;
+}
+
+.mole:hover {
+  animation: topDown .5s;
+  animation-delay: 1s;
+
+  transition: all;
+
+  cursor: pointer;
+}
+
+.mole {
+  background-image: url("assets/toupeira6.svg");
+
+  width: 22.3rem;
+  height: 16.9rem;
+}
+
+@keyframes topDown {
+  0% {
+    background-image: url("assets/toupeira1.svg");
+  }
+
+  25% {
+    background-image: url("assets/toupeira2.svg");
+  }
+
+  50% {
+    background-image: url("assets/toupeira3.svg");
+  }
+
+  75% {
+    background-image: url("assets/toupeira4.svg");
+  }
+
+  100% {
+    background-image: url("assets/toupeira5.svg");
+  }
+}
